@@ -750,8 +750,12 @@ h3 {
   margin: auto;
   padding: 24px 28px 30px;
   color: var(--body);
-  font-size: 9px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 12px;
   line-height: 1.8;
+  display: flex;
 }
 
 /* ---------- Floating WhatsApp ---------- */
@@ -977,6 +981,9 @@ h3 {
     margin-bottom: 50px;
   }
   .site-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
     padding: 24px 22px 90px;
   }
   .mobile-contact {
