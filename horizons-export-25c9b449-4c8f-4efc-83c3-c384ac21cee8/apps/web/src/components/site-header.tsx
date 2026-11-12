@@ -1,0 +1,7 @@
+import { useState } from 'react';
+import { Menu, X, Phone, ArrowUpRight } from 'lucide-react';
+import { clinic } from '@/data/clinic';
+export function SiteHeader() {
+  const [open, setOpen] = useState(false);
+  return <header className="site-header"><div className="header-inner"><a href="/" className="brand" aria-label="Barış Berkay Güldamlası, ana sayfa"><img className="brand-logo" src="https://images.hostinger.com/25c9b449-4c8f-4efc-83c3-c384ac21cee8/0782fef8-c765-43e1-a13c-0f4d5d7c6535.png" alt="Barış Berkay Güldamlası Diş Hekimi" /></a><nav className={open ? 'main-nav is-open' : 'main-nav'} aria-label="Ana menü"><a href="#hakkimizda" onClick={() => setOpen(false)}>Hekim &amp; Klinik</a><a href="#hizmetler" onClick={() => setOpen(false)}>Tedavi Hizmetlerimiz</a><a href="#sorular" onClick={() => setOpen(false)}>Sık Sorulan Sorular</a><a href="#iletisim" onClick={() => setOpen(false)}>İletişim</a></nav><a href={clinic.tel} className="header-phone"><Phone size={17} />{clinic.phone}</a><a href={clinic.booking} target="_blank" rel="noreferrer" className="button header-cta">Randevu Talebi <ArrowUpRight size={17} /></a><button className="menu-toggle" onClick={() => setOpen(!open)} aria-label={open ? 'Menüyü kapat' : 'Menüyü aç'} aria-expanded={open}>{open ? <X /> : <Menu />}</button></div></header>;
+}
