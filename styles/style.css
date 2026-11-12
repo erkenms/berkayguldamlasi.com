@@ -600,7 +600,8 @@ h3 {
 .contact-info {
   border-top: 1px solid #45494f;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 50px;
+  align-items: start;
+  gap: 36px;
   margin-top: 65px;
   padding-top: 38px;
   display: grid;
@@ -628,12 +629,6 @@ h3 {
   font-size: 12px;
 }
 
-.contact-info .text-link {
-  color: #b0b4b8;
-  border-color: #5a5e63;
-  font-size: 11px;
-}
-
 .contact-info dl {
   color: #aeb3b8;
   font-size: 11px;
@@ -649,91 +644,114 @@ h3 {
   color: #fff;
 }
 
-.location-panel {
-  background-color: #34373d;
-  background-image:
-    linear-gradient(35deg, transparent 45%, #ffffff07 45% 48%, transparent 48%),
-    linear-gradient(125deg, transparent 45%, #ffffff07 45% 48%, transparent 48%);
-  background-size: 55px 75px;
-  border-radius: 10px;
+.clinic-map {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 14px;
+  border: 0;
+  border-radius: 9px;
+}
+
+.instagram-card {
+  display: block;
+  max-width: 300px;
+  overflow: hidden;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--navy);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.instagram-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px #0002;
+}
+
+.instagram-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.instagram-avatar-ring {
+  display: grid;
+  flex: 0 0 48px;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 2px;
+  border-radius: 50%;
+  background: conic-gradient(from -45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75);
+}
+
+.instagram-avatar {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 18%;
+}
+
+.instagram-identity {
+  min-width: 0;
+  display: flex;
   flex-direction: column;
+  gap: 4px;
+}
+
+.instagram-identity strong {
+  font-size: 11px;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+
+.instagram-identity span {
+  color: var(--body);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.instagram-follow {
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 13px;
-  min-height: 155px;
-  display: flex;
-  text-decoration: none;
-}
-
-.location-panel:hover {
-  background-color: #3d4046;
-}
-
-.location-panel > svg {
-  color: #b8bdc0;
-}
-
-.location-panel strong {
-  font-size: 14px;
-}
-
-.location-panel > span {
-  color: #aeb3b8;
   gap: 8px;
+  min-height: 28px;
+  margin-top: 10px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: #0095f6;
+  color: #fff;
   font-size: 10px;
-  display: flex;
-  align-items: center;
+  font-weight: 800;
 }
 
 /* ---------- Footer ---------- */
 .site-footer {
   max-width: 1180px;
   margin: auto;
-  padding: 40px 28px 22px;
-}
-
-.footer-top {
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  display: flex;
-}
-
-.footer-top strong {
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.footer-top p {
-  margin: 7px 0;
-  font-size: 10px;
-}
-
-.footer-top nav {
+  padding: 24px 28px 30px;
   color: var(--body);
-  align-items: center;
-  gap: 30px;
-  font-size: 11px;
-  display: flex;
-}
-
-.back-top {
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  display: grid;
-}
-
-.footer-bottom {
-  border-top: 1px solid var(--line);
-  color: var(--body);
-  justify-content: space-between;
-  gap: 20px;
-  padding-top: 22px;
   font-size: 9px;
-  display: flex;
+  line-height: 1.8;
 }
 
 /* ---------- Floating WhatsApp ---------- */
@@ -811,12 +829,6 @@ h3 {
     height: 52px;
   }
   .header-cta {
-    min-height: 42px;
-    margin-left: auto;
-    padding: 10px 12px;
-    font-size: 9px;
-  }
-  .header-cta svg {
     display: none;
   }
   .menu-toggle {
@@ -961,27 +973,11 @@ h3 {
   .contact-info p {
     max-width: 100%;
   }
-  .location-panel {
-    min-height: 180px;
-  }
-  .footer-top {
-    align-items: flex-start;
-    gap: 22px;
-  }
-  .footer-top nav {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 12px;
-    line-height: 1.8;
-  }
-  .site-footer {
-    padding: 35px 22px 90px;
-  }
   .floating-whatsapp {
     margin-bottom: 50px;
+  }
+  .site-footer {
+    padding: 24px 22px 90px;
   }
   .mobile-contact {
     z-index: 25;
