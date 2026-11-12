@@ -981,7 +981,7 @@ h3 {
     padding: 35px 22px 90px;
   }
   .floating-whatsapp {
-    display: none;
+    margin-bottom: 50px;
   }
   .mobile-contact {
     z-index: 25;
