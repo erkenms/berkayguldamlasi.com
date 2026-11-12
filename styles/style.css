@@ -718,15 +718,6 @@ h3 {
   display: flex;
 }
 
-.footer-top nav button {
-  color: inherit;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  padding: 0;
-  font-size: 11px;
-}
-
 .back-top {
   border: 1px solid var(--line);
   border-radius: 50%;
@@ -744,56 +735,6 @@ h3 {
   padding-top: 22px;
   font-size: 9px;
   display: flex;
-}
-
-/* ---------- Cookie Banner ---------- */
-.cookie-banner {
-  z-index: 40;
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 12px;
-  max-width: 560px;
-  padding: 18px 18px 16px;
-  position: fixed;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  box-shadow: 0 12px 40px #11131622;
-}
-
-.cookie-banner.hidden {
-  display: none;
-}
-
-.cookie-banner p {
-  margin: 0 0 14px;
-  font-size: 12px;
-}
-
-.cookie-actions {
-  flex-wrap: wrap;
-  gap: 8px;
-  display: flex;
-}
-
-.cookie-prefs {
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 12px;
-  font-size: 12px;
-  display: flex;
-}
-
-.cookie-prefs label {
-  align-items: flex-start;
-  gap: 8px;
-  display: flex;
-  color: var(--body);
-  cursor: pointer;
-}
-
-.cookie-prefs input[type="checkbox"] {
-  margin-top: 2px;
 }
 
 /* ---------- Floating WhatsApp ---------- */
@@ -1042,9 +983,6 @@ h3 {
   }
   .floating-whatsapp {
     display: none;
-  }
-  .cookie-banner {
-    bottom: 78px;
   }
   .mobile-contact {
     z-index: 25;
