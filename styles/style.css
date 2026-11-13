@@ -415,11 +415,7 @@ h3 {
 }
 
 .lightbox-figure {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
+  position: relative;
   width: fit-content;
   max-width: calc(100vw - var(--lightbox-image-inset-inline) - var(--lightbox-image-inset-inline));
   max-height: calc(100dvh - var(--lightbox-image-inset-top) - 24px);
@@ -427,10 +423,11 @@ h3 {
 }
 
 .lightbox-image {
+  display: block;
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: calc(100dvh - var(--lightbox-image-inset-top) - 60px);
+  max-height: calc(100dvh - var(--lightbox-image-inset-top) - 24px);
   min-height: 0;
   object-fit: contain;
   outline: none;
@@ -439,7 +436,10 @@ h3 {
 }
 
 .lightbox-caption {
-  flex: 0 0 auto;
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 }
 
@@ -1026,7 +1026,7 @@ h3 {
     max-height: calc(100dvh - var(--lightbox-image-inset-top) - 24px);
   }
   .lightbox-image {
-    max-height: calc(100dvh - var(--lightbox-image-inset-top) - 60px);
+    max-height: calc(100dvh - var(--lightbox-image-inset-top) - 24px);
   }
   .lightbox-previous {
     left: 4px;
