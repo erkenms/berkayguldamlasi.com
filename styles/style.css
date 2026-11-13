@@ -587,6 +587,12 @@ h3 {
   display: grid;
 }
 
+.contact-info > * {
+  width: 100%;
+  max-width: 320px;
+  margin-inline: auto;
+}
+
 .info-title {
   align-items: center;
   gap: 10px;
@@ -938,9 +944,6 @@ h3 {
     grid-template-columns: 1fr;
     gap: 30px;
     margin-top: 45px;
-  }
-  .contact-info > div {
-    max-width: none;
   }
   .contact-info p {
     max-width: 100%;
