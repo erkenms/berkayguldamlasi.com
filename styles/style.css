@@ -133,7 +133,7 @@ h3 {
 .section {
   max-width: 1180px;
   margin: auto;
-  padding: 96px 28px;
+  padding: 64px 28px;
 }
 
 /* ---------- Eyebrow ---------- */
@@ -283,7 +283,7 @@ h3 {
 /* ---------- Hero ---------- */
 .hero {
   background: linear-gradient(#f3f4f5 0%, #fff 72%);
-  padding: 92px 28px 86px;
+  padding: 64px 28px 32px;
 }
 
 .hero-split {
