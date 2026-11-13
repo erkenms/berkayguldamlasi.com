@@ -10,32 +10,20 @@
   const mainNav = document.querySelector('.main-nav');
 
   if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('is-open');
+    const syncMenuState = (isOpen) => {
+      mainNav.classList.toggle('is-open', isOpen);
+      menuToggle.classList.toggle('is-open', isOpen);
       menuToggle.setAttribute('aria-expanded', String(isOpen));
       menuToggle.setAttribute('aria-label', isOpen ? 'Menüyü kapat' : 'Menüyü aç');
+    };
 
-      // Toggle hamburger / close icon
-      const hamburgerIcon = menuToggle.querySelector('.icon-menu');
-      const closeIcon = menuToggle.querySelector('.icon-close');
-      if (hamburgerIcon && closeIcon) {
-        hamburgerIcon.style.display = isOpen ? 'none' : 'block';
-        closeIcon.style.display = isOpen ? 'block' : 'none';
-      }
+    menuToggle.addEventListener('click', () => {
+      syncMenuState(!menuToggle.classList.contains('is-open'));
     });
 
-    // Close menu when a nav link is clicked
     mainNav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        mainNav.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.setAttribute('aria-label', 'Menüyü aç');
-        const hamburgerIcon = menuToggle.querySelector('.icon-menu');
-        const closeIcon = menuToggle.querySelector('.icon-close');
-        if (hamburgerIcon && closeIcon) {
-          hamburgerIcon.style.display = 'block';
-          closeIcon.style.display = 'none';
-        }
+        syncMenuState(false);
       });
     });
   }

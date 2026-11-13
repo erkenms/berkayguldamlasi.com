@@ -148,8 +148,7 @@ h3 {
   display: flex;
 }
 
-.eyebrow > span,
-.label-dot {
+.eyebrow > span {
   background: var(--teal);
   border-radius: 50%;
   width: 6px;
@@ -278,6 +277,18 @@ h3 {
   background: transparent;
   border: 0;
   display: none;
+}
+
+.icon-close {
+  display: none;
+}
+
+.menu-toggle.is-open .icon-menu {
+  display: none;
+}
+
+.menu-toggle.is-open .icon-close {
+  display: block;
 }
 
 /* ---------- Hero ---------- */
